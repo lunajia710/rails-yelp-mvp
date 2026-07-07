@@ -4,8 +4,8 @@
 <h2><%= @restaurant.category %></h2>
 <h2><%= @restaurant.phone_number %></h2>
 <h2><% @restaurant.reviews.each do |review| %></h2>
-  <p><% review.content %></p>
-  <p><% review.rating %></p>
+  <p><%= review.content %></p>
+  <p><%= review.rating %></p>
 <% end %>
 <%= link_to "Back", restaurants_path %>
 <%= link_to "Submit a new review", new_restaurant_review_path(@restaurant) %>
